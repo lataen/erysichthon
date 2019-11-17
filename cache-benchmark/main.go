@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./cacheClient"
 	"flag"
 	"fmt"
+	"github.com/liergo/cache/cache-benchmark/cacheClient"
 	"math/rand"
 	"strings"
 	"time"
