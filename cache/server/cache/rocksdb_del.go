@@ -5,11 +5,17 @@ package cache
 // #cgo CFLAGS: -I${SRCDIR}/../../../rocksdb/include
 // #cgo LDFLAGS: -L${SRCDIR}/../../../rocksdb -lrocksdb -lz -lpthread -lsnappy -lstdc++ -lm -O3
 import "C"
+import (
+	"errors"
+	"unsafe"
+)
 
-type rocksdbCache struct {
-	db *C.rocksdb_t
-	ro *C.rocksdb_readoptions_t
-	wo *C.rocksdb_writeoptions_t
-	e  *C.char
-	ch chan *pair
+func (c *rocksdbCache) Del(key string) error {
+	k := C.CString(key)
+	defer C.free(unsafe.Pointer(k))
+	C.rocksdb_delete(c.db, c.wo, k, C.size_t(len(key)), &c.e)
+	if c.e != nil {
+		return errors.New(C.GoString(c.e))
+	}
+	return nil
 }
