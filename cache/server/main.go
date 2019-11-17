@@ -1,11 +1,11 @@
 package main
 
 import (
+	"cache/cache/server/cache"
+	"cache/cache/server/cluster"
+	"cache/cache/server/http"
+	"cache/cache/server/tcp"
 	"flag"
-	"github.com/liergo/cache/cache/server/cache"
-	"github.com/liergo/cache/cache/server/cluster"
-	"github.com/liergo/cache/cache/server/http"
-	"github.com/liergo/cache/cache/server/tcp"
 	"log"
 )
 
