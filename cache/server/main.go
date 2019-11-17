@@ -1,14 +1,13 @@
 package main
 
 import (
-	"cache/cache/server/cache"
-	"cache/cache/server/cluster"
-	"cache/cache/server/http"
-	"cache/cache/server/tcp"
+	"./cache"
+	"./cluster"
+	"./http"
+	"./tcp"
 	"flag"
 	"log"
 )
-
 func main() {
 	typ := flag.String("type", "inmemory", "cache type")
 	ttl := flag.Int("ttl", 30, "cache time to live")
