@@ -1,9 +1,10 @@
 package main
 
 import (
-	"../cache-benchmark/cacheClient"
+
 	"flag"
 	"fmt"
+	"github.com/liergo/cache/cache-benchmark/cacheClient"
 )
 
 func main() {
