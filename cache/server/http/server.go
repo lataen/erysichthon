@@ -1,8 +1,8 @@
 package http
 
 import (
-	"../cache"
-	"../cluster"
+	"github.com/liergo/cache/cache/server/cache"
+	"github.com/liergo/cache/cache/server/cluster"
 	"net/http"
 )
 
