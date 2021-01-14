@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/liergo/cache/cache-benchmark/cacheClient"
+	"github.com/rubeers/erysichthon/cache-benchmark/cacheClient"
 	"math/rand"
 	"strings"
 	"time"
@@ -137,8 +137,8 @@ var typ, server, operation string
 var total, valueSize, threads, keyspacelen, pipelen int
 
 func init() {
-	flag.StringVar(&typ, "type", "redis", "cache server type")
-	flag.StringVar(&server, "h", "localhost", "cache server address")
+	flag.StringVar(&typ, "type", "redis", "storage server type")
+	flag.StringVar(&server, "h", "localhost", "storage server address")
 	flag.IntVar(&total, "n", 1000, "total number of requests")
 	flag.IntVar(&valueSize, "d", 1000, "data size of SET/GET value in bytes")
 	flag.IntVar(&threads, "c", 1, "number of parallel connections")

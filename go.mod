@@ -1,4 +1,4 @@
-module github.com/liergo/cache
+module github.com/rubeers/erysichthon
 
 go 1.13
 

@@ -1,4 +1,4 @@
-package cache
+package storage
 
 // #include <stdlib.h>
 // #include "rocksdb/c.h"

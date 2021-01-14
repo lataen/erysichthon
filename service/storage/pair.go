@@ -1,4 +1,4 @@
-package cache
+package storage
 
 type pair struct {
 	k string

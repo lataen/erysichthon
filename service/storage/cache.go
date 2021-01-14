@@ -1,4 +1,4 @@
-package cache
+package storage
 
 type Cache interface {
 	Set(string, []byte) error

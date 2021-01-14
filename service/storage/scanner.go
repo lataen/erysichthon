@@ -1,4 +1,4 @@
-package cache
+package storage
 
 type Scanner interface {
 	Scan() bool

@@ -1,4 +1,4 @@
-package cache
+package storage
 
 // #include "rocksdb/c.h"
 // #cgo CFLAGS: -I${SRCDIR}/../../../rocksdb/include

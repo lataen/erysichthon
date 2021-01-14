@@ -1,4 +1,4 @@
-package cache
+package storage
 
 type Stat struct {
 	Count     int64

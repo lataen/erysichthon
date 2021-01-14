@@ -1,4 +1,4 @@
-package cache
+package storage
 
 import "log"
 
@@ -11,7 +11,7 @@ func New(typ string, ttl int) Cache {
 		c = newRocksdbCache(ttl)
 	}
 	if c == nil {
-		panic("unknown cache type " + typ)
+		panic("unknown storage type " + typ)
 	}
 	log.Println(typ, "ready to serve")
 	return c

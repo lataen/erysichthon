@@ -1,13 +1,13 @@
 package tcp
 
 import (
-	"github.com/liergo/cache/cache/server/cache"
-	"github.com/liergo/cache/cache/server/cluster"
+	"github.com/rubeers/erysichthon/service/cluster"
+	"github.com/rubeers/erysichthon/service/storage"
 	"net"
 )
 
 type Server struct {
-	cache.Cache
+	storage.Cache
 	cluster.Node
 }
 
@@ -25,6 +25,6 @@ func (s *Server) Listen() {
 	}
 }
 
-func New(c cache.Cache, n cluster.Node) *Server {
+func New(c storage.Cache, n cluster.Node) *Server {
 	return &Server{c, n}
 }
